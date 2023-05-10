@@ -1,0 +1,10 @@
+Tools :
+
+test runner = which finds all test from project and ru through them
+test fixtures = how test setup and org. by module , run own env. with it's own set of variable and data 
+assertion = check expect result
+mocking = mock data means it's not affect real data, repalce or remove serching func. when running test  
+
+Mongoose : Object Model in Node JS
+
+{ [Document] has Many<-- [Collection] == Mongo } { Maps<-- [schema] Use<-- [model] == Node Server }
