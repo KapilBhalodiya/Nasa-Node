@@ -1,0 +1,19 @@
+name: NASA Project CI                #name of the workflow
+on:                                  #defines trigger this workflow will run
+  push:                              #workflow will trigger when push to one of the below branches 
+    branches: [ master ]             #our main branch is master 
+  pull_request:                      #        
+    branches: [ master ]
+jobs:                                #workflow is made up one or more jobs will run one fo the event triggered(push,pull)
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node Js version 16
+        uses: actions/setup-node@v2
+        with: 
+          node-version: '16'
+      - run: npm install
+      - run: npm run build --prefix nasa-front-end
+  #deploy:
+    #needs: build
