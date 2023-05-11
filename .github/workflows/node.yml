@@ -18,6 +18,6 @@ jobs:                                #workflow is made up one or more jobs will 
           node-version: '${{matrix.node-version}}'
       - run: npm install             # 
       - run: npm run watch --prefix server          
-      # - run: npm test
+      - run: npm test
 
   #depoloy:                         #if we deploy   
