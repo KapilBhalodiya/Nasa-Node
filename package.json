@@ -4,14 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "install-server": "npm install --prefix server",
-    "install-client":"npm install --prefix nasa-front-end",
+    // "install-server": "npm install --prefix server",
+    // "install-client": "npm install --prefix nasa-front-end",
     "install": "npm run install-server",
-    "server":"npm run watch --prefix server",
-    "client":"npm start --prefix nasa-front-end",
-    "watch":"npm run server & npm run client",
-    "test": "npm run test --prefix server && npm run test --prefix nasa-front-end"
+    "server": "npm run watch --prefix server",
+    // "client": "npm start --prefix nasa-front-end",
+    // "watch": "npm run server & npm run client",
+    // "check": "npm start --prefix test --prefix test",
+    // "test": "npm run test --prefix server && npm run test --prefix nasa-front-end"
+    "test": "npm run test --prefix server" 
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "arwes": "^1.0.0-next.6",
+    "react-router-dom": "^6.11.1"
+  }
 }

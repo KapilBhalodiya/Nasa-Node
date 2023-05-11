@@ -15,6 +15,6 @@ jobs:                                #workflow is made up one or more jobs will 
           node-version: '16'
       - run: npm install             # 
       - run: npm run watch --prefix server          
-      # - run: npm test
+      - run: npm test
 
   #depoloy:                         #if we deploy   
