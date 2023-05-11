@@ -5,14 +5,17 @@ on:                                  #defines trigger this workflow will run
   pull_request:                      #workflow will trigger when pull to one of the below branches
     branches: [ master ]
 jobs:                                #workflow is made up one or more jobs will run when one of the event triggered(push,pull)
-  build:                             #   
+  build:     
+    strategy:
+      matrix: 
+        node-version: [14.x, 16.x]                        #   
     runs-on: ubuntu-latest           #which os will run on
     steps:                           #we define list of action steps     
       - uses: actions/checkout@v2    #reusble script created by github
-      - name: Use Node Js version 16  
+      - name: Use Node Js version ${{matrix.node-version}}  
         uses: actions/setup-node@v2  #setup node
         with:                        #with specific version     
-          node-version: '16'
+          node-version: '${{matrix.node-version}}'
       - run: npm install             # 
       - run: npm run watch --prefix server          
       # - run: npm test
