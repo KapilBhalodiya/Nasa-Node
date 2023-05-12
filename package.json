@@ -7,11 +7,11 @@
     "install-server": "npm install --prefix server",
     "install-client": "npm install --prefix frontrend",
     "install": "npm run install-server && npm run install-client",
-    "client": "npm start --prefix frontrend",
+    "frontrend": "npm start --prefix frontrend",
     "server": "npm run watch --prefix server",
-    "watch": "npm run server & npm run client",
+    "watch": "npm run server & npm run frontrend",
     "deploy":"npm run build --prefix frontrend && npm start --prefix server",
-    "test": "npm run test --prefix server && npm run --prefix client"
+    "test": "npm run test --prefix server && npm run --prefix frontrend"
   },
   "author": "",
   "license": "ISC",
