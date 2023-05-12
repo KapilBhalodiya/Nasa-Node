@@ -17,7 +17,7 @@ jobs:                                #workflow is made up one or more jobs will 
         with:                        #with specific version     
           node-version: '${{matrix.node-version}}'
       - run: npm install             # 
-      - run: npm run watch --prefix client          
+      - run: npm run build --prefix frontrend          
       - run: npm test
 
   #depoloy:                         #if we deploy   
